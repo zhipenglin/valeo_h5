@@ -19,7 +19,7 @@ export default {
                     strings:[text],
                     cursorChar:''
                 });
-            },500+i*1200);
+            },500+i*500);
 
         });
     }

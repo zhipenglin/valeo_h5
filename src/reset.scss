@@ -103,7 +103,7 @@ body {
         position: absolute;
         left: -10px;
         top:150px;
-        animation: blink 1000ms infinite;
+        animation: blink 500ms infinite;
       }
       &:before{
         content:'';
@@ -112,7 +112,7 @@ body {
         position: absolute;
         right: -14px;
         top:700px;
-        animation: blink 1000ms 500ms infinite;
+        animation: blink 500ms 250ms infinite;
       }
     }
     @include bg(url('./img/card.png'), 694px, 1014px);
@@ -187,7 +187,7 @@ body {
   }
   .bottom{
     position: absolute;
-    bottom:-60px;
+    bottom:-90px;
     left: 50%;
     animation: buttonUpDown 2s infinite;
     &:after{

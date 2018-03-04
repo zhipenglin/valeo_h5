@@ -82,7 +82,7 @@
         position: absolute;
         left: 50%;
         top:50%;
-        transform: translate(-120px,-134px);
+        transform: translate(-120px,-134px) scale(1.3);
       };
       &:before {
         content: '';

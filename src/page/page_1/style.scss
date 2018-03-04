@@ -208,7 +208,7 @@
   }
   .city {
     @include bg(url('../../img/p1-city.png'), 201px, 30px);
-    margin: 80px auto 30px;
+    margin: 40px auto 30px;
     animation: fadeInNormal 1000ms ease 1000ms both running;
   }
   .position {

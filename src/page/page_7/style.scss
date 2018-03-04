@@ -1,0 +1,45 @@
+@import "../../fn";
+
+.page-7{
+  background-image: url('../../img/bg.png');
+  .particleground{
+    position: absolute;
+    pointer-events: none;
+    bottom:0;
+    left: 20%;
+    width: 160%;
+    height: 400px;
+    transform: scale(0.5);
+    transform-origin: 0% 100%;
+  }
+  .logo{
+    width: 167px;
+    height: 72px;
+    position: absolute;
+    top:135px;
+    left: 50%;
+    animation: fadeInNormal 1000ms ease 600ms both running;
+    &:after{
+      content:'';
+      display: block;
+      @include bg(url('../../img/logo.png'),167px,72px);
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .qr{
+    animation: flipInX 1000ms ease 800ms both running;
+    display: block;
+    margin: 270px auto 36px;
+    width: 414px;
+    height: 414px;
+  }
+  .text{
+    text-align: center;
+    font-size: 28px;
+    color: #4E6B7C;
+    animation: fadeInNormal 1000ms ease 1400ms both running;
+    line-height: 48px;
+  }
+}

@@ -1,0 +1,166 @@
+@import "../../fn";
+
+.page-0{
+  background-image: url('../../img/bg.png');
+  .logo{
+    animation: fadeInNormal 1000ms ease 600ms both running;
+    width: 167px;
+    height: 72px;
+    position: absolute;
+    top:75px;
+    left: 50%;
+    &:after{
+      transform: translateX(-50%);
+      content:'';
+      display: block;
+      @include bg(url('../../img/logo.png'),167px,72px);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.leave{
+    .logo{
+      animation: fadeOutUp 1000ms ease both running;
+    }
+    .circular-dev{
+      animation: zoomOut 1000ms ease both running;
+    }
+    .finger{
+      animation: fadeOutDown 1000ms ease both running;
+    }
+  }
+  @mixin circular_bg($url,$width,$height){
+    content:'';
+    display: block;
+    @include bg($url,$width,$height);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @keyframes rotate {
+    0%{
+      opacity: 0;
+      transform: rotate(0);
+    }
+    50%{
+      opacity: 1;
+      transform: rotate(180deg);
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(360deg);
+    }
+  }
+  .circular-bg-1{
+    animation: rotate 1000ms linear 800ms both running infinite;
+    &:before{
+      @include circular_bg(url('../../img/p0-r4.png'),668px,766px);
+    }
+  }
+  .circular-bg-2{
+    animation: rotate 1000ms linear 600ms both running infinite;
+    &:after{
+      @include circular_bg(url('../../img/p0-r3.png'),694px,689px);
+    }
+  }
+  .circular{
+    position: absolute;
+    top:580px;
+    left: 50%;
+    transform: translateX(-50%);
+    .circular-inner-bg-1{
+      animation: zoomIn 1000ms ease 800ms both running;
+      &:before{
+        @include circular_bg(url('../../img/p0-r2.png'),608px,608px);
+      }
+    }
+    .circular-inner-bg-2{
+      animation: rotateIn 1000ms ease 1200ms both running;
+      &:after{
+        @include circular_bg(url('../../img/p0-r1.png'),555px,549px);
+        transform: translate(-50%,-280px);
+      }
+    }
+    .circular-content-bg{
+      animation: rotateIn 600ms ease 400ms both running;
+      .circular-content-particle{
+        width: 1050px;
+        height: 1050px;
+        overflow: hidden;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%,-50%) scale(0.5);
+      }
+      &:before{
+        @include circular_bg(url('../../img/p0-d.png'),525px,524px);
+      }
+    }
+    .circular-content{
+      animation: expandOpen 1000ms ease 1600ms both running;
+      &:after{
+        content:'';
+        display: block;
+        @include bg(url('../../img/p0-t2.png'),473px,128px);
+        position: absolute;
+        top:-60px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .circular-title{
+      position: absolute;
+      @include bg(url('../../img/p0-t1.png'),272px,30px);
+      top:-140px;
+      transform: translateX(-50%);
+      left: 50%;
+      &:after{
+        content:'';
+        display: block;
+        position: absolute;
+        top:280px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include bg(url('../../img/p0-t3.png'),215px,18px);
+        width: 215px;
+        height: 18px;
+      }
+    }
+  }
+  .finger{
+    animation: fadeInUp 1000ms ease 600ms both running;
+    position: absolute;
+    left: 50%;
+    top:1010px;
+    i{
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      @include bg(url('../../img/p0-f.png'),138px,138px);
+      transform: translateX(-50%);
+      position: relative;
+      @keyframes upDown {
+        0%{
+          top:0;
+        }
+        50%{
+          top:100%;
+        }
+        100%{
+          top:0;
+        }
+      }
+      &:after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top:50%;
+        animation: upDown 2000ms infinite;
+      }
+    }
+  }
+}

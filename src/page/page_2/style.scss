@@ -1,0 +1,39 @@
+@import "../../fn";
+
+.page-2 {
+  background-image: url('../../img/bg2.png');
+  .item{
+    width: 247px;
+    padding: 20px 32px;
+    transform-origin: top;
+  }
+  .item-group.left .item{
+    animation: fadeInLeft 1000ms ease both running;
+  }
+  .item-group.right .item{
+    animation: fadeInRight 1000ms ease both running;
+  }
+  .item-group{
+    display: inline-block;
+    vertical-align: text-top;
+  }
+  .item-title{
+    background-image: linear-gradient(-270deg, #73BF63 0%, #FFFFFF 100%);
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 6px 16px;
+    margin-bottom: 15px;
+  }
+  .item-content{
+    padding-left: 10px;
+    font-size: 24px;
+    color: #4E6B7C;
+  }
+  .notice{
+    font-size: 24px;
+    color: #4E6B7C;
+    text-align: center;
+    display: block;
+    transform: translateY(30px);
+  }
+}

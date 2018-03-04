@@ -1,0 +1,248 @@
+@import "../../fn";
+
+.page-1 {
+  background-image: url('../../img/bg.png');
+  .particleground {
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    left: 20%;
+    width: 160%;
+    height: 400px;
+    transform: scale(0.5);
+    transform-origin: 0% 100%;
+  }
+  .title {
+    font-size: 38px;
+    color: #4E6B7C;
+    line-height: 46px;
+    padding-top: 53px;
+    text-align: center;
+    animation: bounceInDown 500ms ease both running;
+  }
+  .logo {
+    @include bg(url('../../img/p1-logo.png'), 254px, 42px);
+    margin: 20px auto 32px;
+    animation: fadeInNormal 1000ms ease 400ms both running;
+  }
+  .center {
+    width: 700px;
+    height: 700px;
+    position: relative;
+    margin: 0 auto;
+    @keyframes rotate {
+      from {
+        opacity: 0.5;
+        transform: rotate(0);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes zoom {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    @keyframes zoom2 {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      25% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      75% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    .radar {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      &:after {
+        content: '';
+        display: block;
+        @include bg(url('../../img/p1-radar.png'), 374px, 374px);
+        animation: rotate 1000ms linear infinite;
+      }
+    }
+    .green-1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      &:after {
+        content: '';
+        display: block;
+        opacity: 0;
+        @include bg(url('../../img/p1-g1.png'), 484px, 484px);
+        animation: zoom 1000ms infinite;
+      }
+    }
+    .green-2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      &:after {
+        content: '';
+        display: block;
+        opacity: 0;
+        @include bg(url('../../img/p1-g2.png'), 576px, 577px);
+        animation: zoom2 1000ms infinite;
+      }
+    }
+    .item {
+      position: absolute;
+      &.item-1 {
+        left: 30px;
+        top:120px;
+        .text {
+          @include bg(url('../../img/p1-t1.png'), 254px, 100px);
+          animation-delay: 1300ms;
+        }
+        .icon {
+          @include bg(url('../../img/p1-icon1.png'), 120px, 120px);
+          animation-delay: 1000ms;
+        }
+      }
+      &.item-2{
+        left: 360px;
+        top:240px;
+        .text{
+          @include bg(url('../../img/p1-t2.png'),254px,100px);
+          animation-delay: 1800ms;
+        }
+        .icon {
+          @include bg(url('../../img/p1-icon2.png'), 120px, 120px);
+          animation-delay: 1500ms;
+        }
+      }
+      &.item-3{
+        left: 0px;
+        top:480px;
+        .text{
+          @include bg(url('../../img/p1-t3.png'),204px,100px);
+          animation-delay: 2500ms;
+        }
+        .icon {
+          @include bg(url('../../img/p1-icon3.png'), 120px, 120px);
+          left: 160px;
+          animation-delay: 2100ms;
+        }
+      }
+      &.item-4{
+        left: 260px;
+        top:570px;
+        .text{
+          @include bg(url('../../img/p1-t4.png'),264px,100px);
+          animation-delay: 3000ms;
+        }
+        .icon {
+          @include bg(url('../../img/p1-icon1.png'), 120px, 120px);
+          animation-delay: 2700ms;
+        }
+      }
+      @keyframes zoom {
+        from{
+          opacity: 0;
+          transform: scale(0);
+        }
+        to{
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes left {
+        from{
+          opacity: 0;
+          transform: scaleX(0);
+        }
+        to{
+          opacity: 1;
+          transform: scaleX(1);
+        }
+      }
+      .text {
+        position: absolute;
+        transform-origin: right;
+        animation: left 500ms 1300ms cubic-bezier(0.46,-0.24, 0.59, 1.4) both running;
+      }
+      .icon {
+        position: absolute;
+        top: -60px;
+        left: 200px;
+        animation: zoom 500ms 1000ms cubic-bezier(0.46,-0.24, 0.59, 1.4) both running;
+      }
+    }
+  }
+
+  @mixin line {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1PX;
+      background: #4E6B7C;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+  .city {
+    @include bg(url('../../img/p1-city.png'), 201px, 30px);
+    margin: 80px auto 30px;
+    animation: fadeInNormal 1000ms ease 1000ms both running;
+  }
+  .position {
+    &:before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      @include bg(url('../../img/p1-position.png'), 200px, 30px);
+    }
+    width: 271px;
+    height: 34px;
+    @include line;
+    margin: 0 auto 20px;
+    animation: fadeInNormal 1000ms ease 1400ms both running;
+  }
+  .welcome {
+    font-size: 28px;
+    color: #4E6B7C;
+    line-height: 28px;
+    font-weight: bold;
+    width: 300px;
+    margin: 40px auto;
+    animation: fadeInNormal 1000ms ease 1800ms both running;
+  }
+  .down {
+    animation: buttonUpDown 2s infinite;
+    &:after {
+      content: '';
+      display: block;
+      @include bg(url('../../img/card-bottom.png'), 130px, 44px);
+      transform: translateX(-50%);
+    }
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+  }
+}

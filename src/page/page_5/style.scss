@@ -1,0 +1,91 @@
+@import "../../fn";
+
+.page-5 {
+  background-image: url('../../img/bg2.png');
+  .icon-list{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .icon-item{
+    vertical-align: text-top;
+    display: inline-block;
+    width: 200px;
+    font-size: 24px;
+    color: #4E6B7C;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    padding: 20px 0;
+    &:before{
+      content:'';
+      display: block;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 20px;
+      background-size: 100%;
+    }
+    &.icon-1{
+      animation: iconAni 500ms both 1000ms running;
+      &:before{
+        background-image: url('../../img/p5-i1.png');
+      }
+    }
+    &.icon-2{
+      animation: iconAni 500ms both 1500ms running;
+      &:before{
+        background-image: url('../../img/p5-i2.png');
+      }
+    }
+    &.icon-3{
+      animation: iconAni 500ms both 2000ms running;
+      &:before{
+        background-image: url('../../img/p5-i3.png');
+      }
+    }
+    &.icon-4{
+      animation: iconAni 500ms both 2500ms running;
+      &:before{
+        background-image: url('../../img/p5-i4.png');
+      }
+    }
+    &.icon-5{
+      animation: iconAni 500ms both 3000ms running;
+      &:before{
+        background-image: url('../../img/p5-i5.png');
+      }
+    }
+  }
+  .swiper-container{
+    width:100%;
+    margin: 0 auto;
+  }
+  .swiper-slide{
+    width: 474px;
+    height: 324px;
+    &.pic-1{
+      background: url(../../img/pic/pic-1.png) 100% / 100%;
+    }
+    &.pic-2{
+      background: url(../../img/pic/pic-2.png) 100% / 100%;
+    }
+    &.pic-3{
+      background: url(../../img/pic/pic-3.png) 100% / 100%;
+    }
+    &.pic-4{
+      background: url(../../img/pic/pic-4.png) 100% / 100%;
+    }
+    &.pic-5{
+      background: url(../../img/pic/pic-5.png) 100% / 100%;
+    }
+    &.pic-6{
+      background: url(../../img/pic/pic-6.png) 100% / 100%;
+    }
+    &.pic-7{
+      background: url(../../img/pic/pic-7.png) 100% / 100%;
+    }
+    &.pic-8{
+      background: url(../../img/pic/pic-8.png) 100% / 100%;
+    }
+  }
+}

@@ -38,6 +38,9 @@ module.exports = {
                     limit: 50000,
                     name: '[name].[ext]'
                 }
+            },{
+                test:/\.mp3$/,
+                loader:'file'
             }
         ]
     },

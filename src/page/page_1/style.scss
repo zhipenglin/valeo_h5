@@ -75,10 +75,19 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      &:after {
+      &:after{
+        content:'';
+        display: block;
+        @include bg(url('../../img/p1-radar2.png'),253px,252px);
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-120px,-134px);
+      };
+      &:before {
         content: '';
         display: block;
-        @include bg(url('../../img/p1-radar.png'), 374px, 374px);
+        @include bg(url('../../img/p1-radar1.png'), 374px, 374px);
         animation: rotate 1000ms linear infinite;
       }
     }

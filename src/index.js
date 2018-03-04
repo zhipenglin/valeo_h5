@@ -5,6 +5,7 @@ import './reset.scss'
 import './core/flexible';
 import director from './core/director'
 import share from './core/share'
+import './core/bgm'
 
 share({
     title:'Valeo-法雷奥全国联动大型招聘会',

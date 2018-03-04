@@ -11,14 +11,13 @@
     transform: translateX(-48px);
   }
   .car{
-    transform-origin: 30% 50%;
-    animation: flipInY 2000ms ease both running;
     &:after{
       content:'';
       display: block;
       @include bg(url('../../img/p4-car.png'),401px,317px);
-      transform: translateX(-50%);
+      animation: flipInY 2000ms 500ms ease both running;
     }
+    transform: translateX(-50%);
     position: absolute;
     top:292px;
     left: 50%;

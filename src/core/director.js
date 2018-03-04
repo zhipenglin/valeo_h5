@@ -50,7 +50,7 @@ class Director{
         this.stage.prepend(prevPage);
     }
     start(){
-        return this.go(0);
+        return this.go(4);
     }
     go(index){
         if(index<0){

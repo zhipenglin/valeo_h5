@@ -35,7 +35,8 @@ export default function($el){
                     $el.css({'transform':`translateY(${(distanceY>0?1:-1)*100}%)`,'-webkit-transform':`translateY(${(distanceY>0?1:-1)*100}%)`});
                 },0);
                 setTimeout(()=>{
-                    $el.css({'transform':`translateY(0)`,'-webkit-transform':`translateY(0)`,'transition':'none','-webkit-transition':'none'});
+                    $
+                    el.css({'transform':`translateY(0)`,'-webkit-transform':`translateY(0)`,'transition':'none','-webkit-transition':'none'});
                     action&&$el.trigger(action);
                     active=false;
                 },500);

@@ -65,6 +65,17 @@ body {
   }
 }
 
+.bgm{
+  @include bg(url('./img/bgm-c.png'),46px,46px);
+  position: absolute;
+  right: 55px;
+  top:75px;
+  &.open{
+    background-image: url('./img/bgm.png');
+    animation: rotate 2s linear infinite;
+  }
+}
+
 .card {
   width:  694px;
   height: 1014px;

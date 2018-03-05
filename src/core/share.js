@@ -49,7 +49,7 @@ export default function(shareObj){
                         wx.onMenuShareAll({
                             title: shareObj.title,
                             imgUrl: shareObj.logo,
-                            desc: shareObj.des,
+                            desc: shareObj.des
                         });
                     });
                 } else {

@@ -3,10 +3,9 @@
  */
 import tpl from './tpl.html'
 import './style.scss'
-import qr from '../../img/p7-qr.png'
 
 export default {
-    tpl:()=>tpl({qr}),
+    tpl:()=>tpl(),
     create:($el)=>{
         $el.find('.particleground').particleground({
             dotColor: 'rgb(177,206,205)',

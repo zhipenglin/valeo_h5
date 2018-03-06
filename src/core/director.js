@@ -6,6 +6,8 @@ import flip from './flip'
 import page_0 from '../page/page_0'
 import page_1 from '../page/page_1'
 import page_2 from '../page/page_2'
+import page_2_1 from '../page/page_2_1'
+import page_2_2 from '../page/page_2_2'
 import page_3 from '../page/page_3'
 import page_4 from '../page/page_4'
 import page_5 from '../page/page_5'
@@ -15,12 +17,12 @@ import page_7 from '../page/page_7'
 class Director{
     constructor(){
         this.activeIndex=0;
-        this.pages=[page_0,page_1,page_2,page_3,page_4,page_5,page_6,page_7].map((page,key)=>{
+        this.pages=[{page:page_0,name:0},{page:page_1,name:1},{page:page_2,name:2},{page:page_2_1,name:2},{page:page_2_2,name:2},{page:page_3,name:3},{page:page_4,name:4},{page:page_5,name:5},{page:page_6,name:6},{page:page_7,name:7}].map(({page,name})=>{
             if(page.tpl||page){
                 var tpl=(page.tpl||page)();
                 if(tpl){
                     return {
-                        tpl:$(`<div class="page page-${key}">${tpl}</div>`),
+                        tpl:$(`<div class="page page-${name}">${tpl}</div>`),
                         create:page.create||function(){},
                         destroy:page.destroy||function(){}
                     }

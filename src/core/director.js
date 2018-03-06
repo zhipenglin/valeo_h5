@@ -67,6 +67,7 @@ class Director{
         this._addNextPage(index);
         this.activeIndex=index;
         this.activePage=currentPage;
+        window._czc.push(["_trackEvent", '法雷奥活动', `page ${index} open`]);
         return this;
     }
     prev(){

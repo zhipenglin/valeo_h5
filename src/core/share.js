@@ -2,7 +2,7 @@
  * Created by ifchangetoclzp on 2017/1/20.
  */
 // 微信分享
-export default function(shareObj){
+export default function(shareObj,callback){
     shareObj=Object.assign({},{
         title:'',
         logo:'',
@@ -49,7 +49,7 @@ export default function(shareObj){
                         wx.onMenuShareAll({
                             title: shareObj.title,
                             imgUrl: shareObj.logo,
-                            desc: shareObj.des
+                            desc: shareObj.des,...shareObj
                         });
                     });
                 } else {

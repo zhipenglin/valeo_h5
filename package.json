@@ -2,8 +2,10 @@
   "name": "data_h5",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --profile --colors --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --profile --colors"
   },
@@ -30,6 +32,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "fastclick": "^1.0.6",
     "file-loader": "^0.9.0",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.22.0",
     "inline-style-prefixer": "^2.0.4",
     "jquery": "^3.1.1",
